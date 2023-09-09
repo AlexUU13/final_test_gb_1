@@ -10,5 +10,5 @@
 
 ## Блок-схема:
 
-
+![Блок-схема](https://github.com/AlexUU13/final_test_gb_1/blob/main/diagram.png)
 
