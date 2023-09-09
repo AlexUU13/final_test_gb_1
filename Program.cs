@@ -2,12 +2,12 @@
 
 using System.ComponentModel;
 
-int[] CreateRandomeArray(int size, int minValue, int maxValuse)
+string[] CreateRandomeArray(int size, int minValue, int maxValuse)
 {
-    int[] array = new int[size];
+    string[] array = new string[size];
     for (int i = 0; i < size; i++)
     {
-        array[i] = new Random().Next(minValue, maxValuse + 1);
+        array[i] = Convert.ToString(new Random().Next(minValue, maxValuse + 1));
     }
     return array;
 }
@@ -46,7 +46,16 @@ if (a == "yes")
 {
     System.Console.WriteLine("enter array size");
     int size = Convert.ToInt32(Console.ReadLine());
-    System.Console.WriteLine(String.Join(", ",Find(CreateNewArray(size))));
+    System.Console.WriteLine(String.Join(", ", Find(CreateNewArray(size))));
 
 }
-
+if (a == "no")
+{
+    System.Console.WriteLine("enter array size");
+    int size = Convert.ToInt32(Console.ReadLine());
+    System.Console.WriteLine("enter min value");
+    int minValue = Convert.ToInt32(Console.ReadLine());
+    System.Console.WriteLine("enter max value");
+    int maxValuse = Convert.ToInt32(Console.ReadLine());
+    System.Console.WriteLine(String.Join(", ", Find(CreateRandomeArray(size, minValue, maxValuse))));
+}
